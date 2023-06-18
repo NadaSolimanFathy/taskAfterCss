@@ -1,0 +1,262 @@
+main {
+  position: absolute;
+  top: 500px;
+  left: calc(20% / 2);
+  width: 80%;
+  height: 1800px;
+  background-color: white;
+}
+
+section {
+  display: grid;
+  grid-template-rows: repeat(4, calc(105% / 4));
+  grid-template-columns: repeat(3, calc(95% / 3));
+  grid-gap: 5px;
+}
+.section-1,
+.section-3 {
+  margin-top: 3em;
+  margin-left: 1.5em;
+}
+.options {
+  h2 {
+    color: rgb(39, 36, 36);
+    text-align: center;
+    font-size: 16px;
+    font-family: "Quicksand", sans-serif;
+    padding-bottom: 10px;
+  }
+
+  p {
+    color: $Lgrey;
+    font-size: 14px;
+    text-align: center;
+    font-family: $normalFont;
+    padding-bottom: 1em;
+  }
+  a {
+    margin-left: 9em;
+    margin-top: 9em;
+    text-align: center;
+    font-family: $normalFont;
+    text-decoration: none;
+    color: rgb(15, 67, 134);
+  }
+}
+.option-1 {
+  grid-row: 1/4;
+  grid-column: 1/2;
+}
+.option-2 {
+  grid-row: 1/4;
+  grid-column: 2/3;
+}
+.option-3 {
+  grid-row: 1/4;
+  grid-column: 3/4;
+}
+.decoration {
+  text-align: center;
+  grid-row: 4/5;
+  grid-column: 1/4;
+  h3 {
+    padding: 0.5em;
+    font-size: 25px;
+    font-family: $normalFont;
+    color: rgb(39, 36, 36);
+  }
+  .fhr {
+    color: $silver;
+    width: 15em;
+    display: inline-block;
+  }
+  .stars {
+    display: inline;
+    color: $silver;
+    font-size: larger;
+  }
+}
+
+#ICON1,
+#ICON2,
+#ICON3 {
+  position: relative;
+  left: 4em;
+  height: 2em;
+  width: 2em;
+  text-align: center;
+  padding-top: 1em;
+
+  clip-path: circle(35%);
+  color: white;
+  background: $lightGreen;
+  font-size: 40px;
+  transition: all 0.3s ease-in-out;
+}
+#ICON1:hover,
+#ICON2:hover,
+#ICON3:hover {
+  background: white;
+  color: rgb(37, 189, 138);
+  font-size: 50px;
+  left: 3em;
+}
+
+.section-2 {
+  margin-top: 5em;
+  grid-gap: 2em;
+}
+.container-1 {
+  grid-row: 1/4;
+  grid-column: 1/2;
+  border: 1px solid $Lgrey;
+}
+.container-2 {
+  grid-row: 1/4;
+  grid-column: 2/3;
+  border: 1px solid $Lgrey;
+}
+.container-3 {
+  grid-row: 1/4;
+  grid-column: 3/4;
+  border: 1px solid $Lgrey;
+}
+.green-Button {
+  grid-row: 4/5;
+  grid-column: 1/4;
+}
+
+.product {
+  width: 100%;
+  height: 315px;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.product:hover {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 1em;
+    height: auto;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: orangered;
+    border-radius: 2em;
+  }
+  &::-webkit-scrollbar-track {
+    background: whitesmoke;
+  }
+}
+
+.product img {
+  width: 90%;
+  padding: 1em;
+}
+
+h4,
+h5 {
+  text-align: center;
+  margin-top: 15px;
+  font-family: $normalFont;
+}
+.shr {
+  margin: auto;
+  margin-top: 15px;
+  color: $silver;
+  width: 80%;
+}
+
+.green-Button {
+  position: relative;
+  top: 1.5em;
+  margin: auto;
+  margin-bottom: 5em;
+  width: 20em;
+  height: 3.5em;
+  text-align: center;
+  background-color: $lightGreen;
+}
+
+.green-Button a {
+  position: absolute;
+  top: 0.9em;
+  left: 1.8em;
+  color: white;
+  font-family: $normalFont;
+  font-size: larger;
+  font-weight: bolder;
+  text-decoration: none;
+  text-align: center;
+}
+.White-Star {
+  width: 1.5em;
+  height: 1.5em;
+  font-size: x-large;
+  position: absolute;
+  left: 11em;
+  padding: 0.4em;
+  color: white;
+  background-color: $darkGreen;
+}
+.transfer {
+  position: relative;
+  top: -4.5em;
+}
+.section-3 #ICON1,
+.section-3 #ICON2,
+.section-3 #ICON3 {
+  position: relative;
+  top: -1.5em;
+  color: $lightGreen;
+  background-color: white;
+}
+
+.option-extra {
+  height: 14em;
+  border: 1px solid $silver;
+}
+h3 {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: $normalFont;
+}
+.girl {
+  height: 8em;
+  width: 8em;
+  clip-path: circle(50%);
+  position: relative;
+  left: 34em;
+  top: 2em;
+}
+article {
+  font-size: 1.2em;
+  font-family: $normalFont;
+  font-weight: lighter;
+  color: gray;
+  text-align: center;
+  margin-top: 3em;
+}
+article p {
+  font-size: 1.6em;
+
+  color: rgb(46, 45, 45);
+}
+.greenPart {
+  position: relative;
+  top: 100em;
+  width: 100%;
+  height: 10em;
+  background-color: $lightGreen;
+  text-align: center;
+}
+.greenPart pre {
+  padding-top: 2.5em;
+  font-size: 2em;
+  color: white;
+}
+.fatherSpan {
+  padding: 0.5em;
+  border: 1px solid white;
+}

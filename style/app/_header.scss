@@ -1,0 +1,96 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 670px;
+  background-image: url(../../images/homeimg.jpg);
+  // background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .hrader-element__one {
+    height: 80px;
+    background-color: whitesmoke;
+    .site-name {
+      display: inline-block;
+      width: fit-content;
+      padding: 25px;
+      margin-left: 180px;
+      color: $darkBlue;
+      font-size: 28px;
+      font-family: $headFont;
+    }
+    .site-name:hover::first-letter {
+      font-size: 40px;
+    }
+
+    .header-element__nav-bar {
+      position: absolute;
+      top: 25px;
+      left: 800px;
+      width: 45%;
+
+      .nav-bar__container {
+        display: flex;
+        justify-content: space-around;
+        .nav-bar__item {
+          display: inline;
+          font-size: 20px;
+          font-family: sans-serif;
+          a {
+            text-decoration: none;
+            color: $darkBlue;
+            font-size: 20px;
+            font-weight: bolder;
+            font-family: $headFont;
+          }
+        }
+        .nav-bar__item :hover {
+          animation-name: navAnimation;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+          border-bottom: 3px solid $lightBlue;
+          border-left: 3px solid $lightBlue;
+
+          border-radius: 5px;
+        }
+        @keyframes navAnimation {
+          from {
+            font-size: 20px;
+            color: $darkBlue;
+          }
+          to {
+            font-size: 25px;
+            color: $lightBlue;
+          }
+        }
+      }
+    }
+  }
+  .header-element__two {
+    .textOnImage {
+      position: absolute;
+      color: whitesmoke;
+      &.firstp {
+        top: 2.4em;
+        left: 4.7em;
+        font-size: 4.8em;
+        font-weight: bolder;
+        font-family: $headFont;
+      }
+      &.secondp {
+        top: 3.6em;
+        left: 4.9em;
+        font-size: 4.8rem;
+        font-weight: lighter;
+        font-family: $secondFont;
+      }
+    }
+  }
+}

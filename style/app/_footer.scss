@@ -1,0 +1,46 @@
+/* ///////////////////////////////////FOOTER//////////////////////////////////// */
+footer {
+  height: 15em;
+  background-color: black;
+  width: 100%;
+  position: relative;
+  top: 100em;
+}
+h6 {
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  font-family: $secondFont;
+
+  padding-top: 2em;
+}
+.footerflex {
+  display: flex;
+  width: 35%;
+  justify-content: space-around;
+  margin-left: 500px;
+}
+.fpics {
+  // footer pictures
+  color: aliceblue;
+  border: 1px solid rgb(39, 39, 39);
+  padding: 20px;
+  margin: 15px;
+  height: 15px;
+  width: 15px;
+}
+#phoneicon {
+  font-size: 15px;
+}
+.nameoftheme {
+  color: $lightGreen;
+}
+footer p {
+  font-size: 1em;
+  color: $Lgrey;
+  font-family: $normalFont;
+  margin-left: 42em;
+}
+.move {
+  margin-left: 39em;
+}
