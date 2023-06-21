@@ -3,9 +3,11 @@
 *::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 header {
+  overflow-x: hidden;
   position: relative;
   width: 100%;
   height: 670px;
@@ -15,13 +17,15 @@ header {
   background-repeat: no-repeat;
 
   .hrader-element__one {
+    // border: 1px solid blue;
+
     height: 80px;
     background-color: whitesmoke;
     .site-name {
       display: inline-block;
       width: fit-content;
       padding: 25px;
-      margin-left: 180px;
+      margin-left: 6%;
       color: $darkBlue;
       font-size: 28px;
       font-family: $headFont;
@@ -31,10 +35,26 @@ header {
     }
 
     .header-element__nav-bar {
-      position: absolute;
-      top: 25px;
-      left: 800px;
-      width: 45%;
+      left: 35%;
+      width: 40%;
+      position: relative;
+      display: inline-block;
+      .dropBtn {
+        display: none;
+        margin-left: 0;
+      }
+      @media only screen and(max-width:950px) {
+        .dropBtn {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: $lightGreen;
+          text-align: center;
+          padding: 3%;
+          border-radius: 5px;
+          color: white;
+        }
+      }
 
       .nav-bar__container {
         display: flex;
@@ -71,25 +91,99 @@ header {
           }
         }
       }
+
+      @media only screen and(max-width:950px) {
+        .nav-bar__container {
+          // background-color: aquamarine;
+          visibility: hidden;
+          position: absolute;
+        }
+      }
+    }
+
+    @media only screen and(max-width:950px) {
+      .header-element__nav-bar {
+        left: 50%;
+        width: 15vw;
+      }
+    }
+    @media only screen and(max-width:700px) {
+      .header-element__nav-bar {
+        left: 47%;
+      }
+    }
+    @media only screen and(max-width:600px) {
+      .header-element__nav-bar {
+        left: 40%;
+      }
+    }
+    @media only screen and(max-width:500px) {
+      .header-element__nav-bar {
+        left: 36%;
+        width: 15vw;
+      }
+    }
+    @media only screen and(max-width:400px) {
+      .header-element__nav-bar {
+        left: 30%;
+        width: 15vw;
+      }
+    }
+    @media only screen and(max-width:300px) {
+      .header-element__nav-bar {
+        left: 25%;
+        width: 15vw;
+      }
+    }
+    @media only screen and(max-width:950px) {
+      .header-element__nav-bar:hover .nav-bar__container {
+        visibility: visible;
+        width: 100%;
+        flex-direction: column;
+        background-color: whitesmoke;
+      }
     }
   }
+
   .header-element__two {
     .textOnImage {
-      position: absolute;
+      // position: absolute;
       color: whitesmoke;
       &.firstp {
-        top: 2.4em;
-        left: 4.7em;
+        margin-top: 2em;
+        // left: 4.7em;
         font-size: 4.8em;
         font-weight: bolder;
         font-family: $headFont;
+        text-align: center;
+      }
+      @media only screen and(max-width:1000px) {
+        &.firstp {
+          font-size: 3.8em;
+        }
+      }
+      @media only screen and(max-width:800px) {
+        &.firstp {
+          font-size: 3em;
+        }
       }
       &.secondp {
-        top: 3.6em;
-        left: 4.9em;
+        // top: 3.6em;
+        // left: 4.9em;
         font-size: 4.8rem;
         font-weight: lighter;
         font-family: $secondFont;
+        text-align: center;
+      }
+      @media only screen and(max-width:1000px) {
+        &.secondp {
+          font-size: 3.8em;
+        }
+      }
+      @media only screen and(max-width:800px) {
+        &.secondp {
+          font-size: 3em;
+        }
       }
     }
   }

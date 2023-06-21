@@ -1,213 +1,331 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 main {
-  position: absolute;
-  top: 500px;
-  left: calc(20% / 2);
+  position: relative;
+  top: -100px;
+  left: 10%;
   width: 80%;
-  height: 1800px;
   background-color: white;
-}
+  // border: 1px solid red;
+  ////////////SECTION1//////////////////////////
+  .section-1 {
+    margin-top: 3em;
+    padding-top: 3%;
+    margin-bottom: 3em;
 
-section {
-  display: grid;
-  grid-template-rows: repeat(4, calc(105% / 4));
-  grid-template-columns: repeat(3, calc(95% / 3));
-  grid-gap: 5px;
-}
-.section-1,
-.section-3 {
-  margin-top: 3em;
-  margin-left: 1.5em;
-}
-.options {
-  h2 {
-    color: rgb(39, 36, 36);
-    text-align: center;
-    font-size: 16px;
-    font-family: "Quicksand", sans-serif;
-    padding-bottom: 10px;
+    // background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-column-gap: 5%;
+    .options {
+      .symbol {
+        text-align: center;
+      }
+
+      #ICON1,
+      #ICON2,
+      #ICON3 {
+        height: 2em;
+        width: 2em;
+        text-align: center;
+        padding-top: 0.5em;
+        clip-path: circle(35%);
+        color: white;
+        background: $lightGreen;
+        font-size: 40px;
+        transition: all 0.3s ease-in-out;
+      }
+      @media only screen and(max-width:800px) {
+        #ICON1,
+        #ICON2,
+        #ICON3 {
+          font-size: 30px;
+        }
+      }
+      #ICON1:hover,
+      #ICON2:hover,
+      #ICON3:hover {
+        background: white;
+        color: rgb(37, 189, 138);
+        font-size: 50px;
+        left: 3em;
+      }
+
+      h2 {
+        color: rgb(39, 36, 36);
+        text-align: center;
+        font-size: 16px;
+        font-family: "Quicksand", sans-serif;
+        padding-bottom: 10px;
+      }
+      @media only screen and(max-width:800px) {
+        h2 {
+          font-size: 14px;
+        }
+      }
+
+      p {
+        color: $Lgrey;
+        font-size: 14px;
+        text-align: center;
+        font-family: $normalFont;
+        padding-bottom: 1em;
+      }
+      a {
+        margin-left: 9em;
+        margin-top: 9em;
+        text-align: center;
+        font-family: $normalFont;
+        text-decoration: none;
+        // color: rgb(15, 67, 134);
+      }
+    }
+
+    .decoration {
+      // background-color: brown;
+      text-align: center;
+      grid-column: 1/4;
+      h3 {
+        font-size: 25px;
+        font-family: $normalFont;
+        color: rgb(39, 36, 36);
+      }
+      .fhr {
+        width: 15em;
+        display: inline-block;
+      }
+      @media only screen and(max-width:850px) {
+        .fhr {
+          width: 10em;
+        }
+      }
+      @media only screen and(max-width:550px) {
+        .fhr {
+          width: 7em;
+        }
+      }
+      @media only screen and(max-width:430px) {
+        .fhr {
+          width: 5em;
+        }
+      }
+      .stars {
+        display: inline;
+        color: $silver;
+        font-size: larger;
+      }
+    }
   }
+  ////////////SECTION2//////////////////////////
+  .section-2 {
+    // margin-top: 5em;
+    // margin-top: 5em;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: 350px 100px;
+    // background-color: burlywood;
+    grid-column-gap: 5%;
+    .container {
+      // height: 50%;
+      border: 1px solid $Lgrey;
+      grid-row: 1/2;
+      .product {
+        // background-color: rgb(255, 178, 127);
+        width: 100%;
+        height: 75%;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+      .product:hover {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+          width: 1em;
+          height: auto;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: orangered;
+          border-radius: 2em;
+        }
+        &::-webkit-scrollbar-track {
+          background: whitesmoke;
+        }
+      }
 
-  p {
-    color: $Lgrey;
-    font-size: 14px;
-    text-align: center;
-    font-family: $normalFont;
-    padding-bottom: 1em;
+      .product img {
+        width: 100%;
+      }
+
+      h4,
+      h5 {
+        text-align: center;
+        margin-top: 15px;
+        font-family: $normalFont;
+      }
+      .shr {
+        margin: auto;
+        margin-top: 15px;
+        color: $silver;
+        width: 80%;
+      }
+    }
+
+    .green-Button {
+      grid-row: 2/3;
+      grid-column: 1/4;
+      // border: 1px solid red;
+      position: relative;
+      top: 1.5em;
+      margin: auto;
+      margin-bottom: 5em;
+      width: 20em;
+      height: 3.5em;
+      text-align: center;
+      background-color: $lightGreen;
+      p {
+        padding-top: 15px;
+        a {
+          color: white;
+          font-family: $normalFont;
+          font-size: 18px;
+          padding-right: 40px;
+          font-weight: bolder;
+          text-decoration: none;
+          text-align: center;
+        }
+
+        .White-Star {
+          width: 1.5em;
+          height: 1.5em;
+          font-size: x-large;
+          position: absolute;
+          left: 11em;
+          top: 0.3em;
+          padding: 0.1em;
+          color: white;
+          background-color: $darkGreen;
+        }
+        @media only screen and(max-width:950px) {
+          .White-Star {
+            width: 1.4em;
+            height: 1.4em;
+            padding: 0em;
+            left: 8.9em;
+          }
+        }
+      }
+    }
+
+    @media only screen and(max-width:950px) {
+      .green-Button {
+        margin-top: 2.5%;
+        width: 16em;
+        height: 3em;
+      }
+    }
   }
-  a {
-    margin-left: 9em;
-    margin-top: 9em;
-    text-align: center;
-    font-family: $normalFont;
-    text-decoration: none;
-    color: rgb(15, 67, 134);
+  @media only screen and(max-width:1200px) {
+    .section-2 {
+      height: 400px;
+      grid-template-rows: 300px 100px;
+      // background-color: aquamarine;
+    }
   }
-}
-.option-1 {
-  grid-row: 1/4;
-  grid-column: 1/2;
-}
-.option-2 {
-  grid-row: 1/4;
-  grid-column: 2/3;
-}
-.option-3 {
-  grid-row: 1/4;
-  grid-column: 3/4;
-}
-.decoration {
-  text-align: center;
-  grid-row: 4/5;
-  grid-column: 1/4;
-  h3 {
-    padding: 0.5em;
-    font-size: 25px;
-    font-family: $normalFont;
-    color: rgb(39, 36, 36);
+  @media only screen and(max-width:900px) {
+    .section-2 {
+      height: 350px;
+      grid-template-rows: 250px 100px;
+      // background-color: aquamarine;
+    }
   }
-  .fhr {
-    color: $silver;
-    width: 15em;
-    display: inline-block;
+  ////////SECTION3//////////////////////////
+  .section-3 {
+    margin-top: 7%;
+    // background-color: blueviolet;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    // grid-template-rows: 350px 100px;
+    grid-column-gap: 5%;
+    .options {
+      height: 75%;
+      text-align: center;
+      margin-top: 10%;
+      .transfer {
+        padding-top: 5%;
+        h2 {
+          font-size: 20px;
+          // text-align: ce5nter;
+          padding-bottom: 2%;
+        }
+        @media only screen and (max-width: 670px) {
+          h2 {
+            font-size: 16px;
+          }
+        }
+        p {
+          color: gray;
+        }
+      }
+    }
   }
-  .stars {
-    display: inline;
-    color: $silver;
-    font-size: larger;
+  @media only screen and (max-width: 1100px) {
+    .section-3 {
+      height: 400px;
+    }
   }
-}
-
-#ICON1,
-#ICON2,
-#ICON3 {
-  position: relative;
-  left: 4em;
-  height: 2em;
-  width: 2em;
-  text-align: center;
-  padding-top: 1em;
-
-  clip-path: circle(35%);
-  color: white;
-  background: $lightGreen;
-  font-size: 40px;
-  transition: all 0.3s ease-in-out;
-}
-#ICON1:hover,
-#ICON2:hover,
-#ICON3:hover {
-  background: white;
-  color: rgb(37, 189, 138);
-  font-size: 50px;
-  left: 3em;
-}
-
-.section-2 {
-  margin-top: 5em;
-  grid-gap: 2em;
-}
-.container-1 {
-  grid-row: 1/4;
-  grid-column: 1/2;
-  border: 1px solid $Lgrey;
-}
-.container-2 {
-  grid-row: 1/4;
-  grid-column: 2/3;
-  border: 1px solid $Lgrey;
-}
-.container-3 {
-  grid-row: 1/4;
-  grid-column: 3/4;
-  border: 1px solid $Lgrey;
-}
-.green-Button {
-  grid-row: 4/5;
-  grid-column: 1/4;
-}
-
-.product {
-  width: 100%;
-  height: 315px;
-
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-.product:hover {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  &::-webkit-scrollbar {
-    width: 1em;
-    height: auto;
+  @media only screen and (max-width: 965px) {
+    .section-3 {
+      height: 450px;
+    }
   }
-  &::-webkit-scrollbar-thumb {
-    background: orangered;
-    border-radius: 2em;
+  @media only screen and (max-width: 670px) {
+    .section-3 {
+      height: 500px;
+    }
   }
-  &::-webkit-scrollbar-track {
-    background: whitesmoke;
+  @media only screen and (max-width: 525px) {
+    .section-3 {
+      height: 600px;
+    }
+  }
+  @media only screen and (max-width: 395px) {
+    .section-3 {
+      height: 700px;
+    }
+  }
+  @media only screen and (max-width: 345px) {
+    .section-3 {
+      height: 800px;
+    }
   }
 }
 
-.product img {
-  width: 90%;
-  padding: 1em;
-}
+// @media only screen and (max-width: 900px) {
+//   .section-2 {
+//     background-color: red;
+//     grid-template-rows: repeat(3, 20%);
+//   }
+// }
 
-h4,
-h5 {
-  text-align: center;
-  margin-top: 15px;
-  font-family: $normalFont;
-}
-.shr {
-  margin: auto;
-  margin-top: 15px;
-  color: $silver;
-  width: 80%;
-}
+// .green-Button {
 
-.green-Button {
-  position: relative;
-  top: 1.5em;
-  margin: auto;
-  margin-bottom: 5em;
-  width: 20em;
-  height: 3.5em;
-  text-align: center;
-  background-color: $lightGreen;
-}
+// }
 
-.green-Button a {
-  position: absolute;
-  top: 0.9em;
-  left: 1.8em;
-  color: white;
-  font-family: $normalFont;
-  font-size: larger;
-  font-weight: bolder;
-  text-decoration: none;
-  text-align: center;
-}
-.White-Star {
-  width: 1.5em;
-  height: 1.5em;
-  font-size: x-large;
-  position: absolute;
-  left: 11em;
-  padding: 0.4em;
-  color: white;
-  background-color: $darkGreen;
-}
-.transfer {
-  position: relative;
-  top: -4.5em;
-}
 .section-3 #ICON1,
 .section-3 #ICON2,
 .section-3 #ICON3 {
+  font-size: 40px;
   position: relative;
-  top: -1.5em;
+  top: -0.5em;
+  left: 0.2em;
   color: $lightGreen;
   background-color: white;
 }
@@ -222,27 +340,29 @@ h3 {
   font-size: 1.5em;
   font-family: $normalFont;
 }
-.girl {
-  height: 8em;
-  width: 8em;
-  clip-path: circle(50%);
-  position: relative;
-  left: 34em;
-  top: 2em;
-}
-article {
-  font-size: 1.2em;
-  font-family: $normalFont;
-  font-weight: lighter;
-  color: gray;
+.support {
   text-align: center;
-  margin-top: 3em;
-}
-article p {
-  font-size: 1.6em;
+  .girl {
+    height: 8em;
+    width: 8em;
+    clip-path: circle(50%);
+    margin-top: 5%;
+  }
+  article {
+    font-size: 1.2em;
+    font-family: $normalFont;
+    font-weight: lighter;
+    color: gray;
+    text-align: center;
+    margin-top: 3em;
+  }
+  article p {
+    font-size: 1.6em;
 
-  color: rgb(46, 45, 45);
+    color: rgb(46, 45, 45);
+  }
 }
+
 .greenPart {
   position: relative;
   top: 100em;
@@ -251,12 +371,19 @@ article p {
   background-color: $lightGreen;
   text-align: center;
 }
-.greenPart pre {
+.greenPart p {
   padding-top: 2.5em;
   font-size: 2em;
   color: white;
+}
+@media only screen and(max-width:950px) {
+  .greenPart p {
+    font-size: 1.5em;
+  }
 }
 .fatherSpan {
   padding: 0.5em;
   border: 1px solid white;
 }
+
+////////ICONS Part///////////////////////////////////////

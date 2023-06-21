@@ -1,10 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* ///////////////////////////////////FOOTER//////////////////////////////////// */
 footer {
-  height: 15em;
+  // height: 18em;
   background-color: black;
   width: 100%;
-  position: relative;
-  top: 100em;
+  // position: absolute;
+  // bottom: 0px;
 }
 h6 {
   color: white;
@@ -16,15 +23,16 @@ h6 {
 }
 .footerflex {
   display: flex;
+  flex-wrap: wrap;
   width: 35%;
   justify-content: space-around;
-  margin-left: 500px;
+  margin-left: 32.5%;
 }
+
 .fpics {
   // footer pictures
   color: aliceblue;
   border: 1px solid rgb(39, 39, 39);
-  padding: 20px;
   margin: 15px;
   height: 15px;
   width: 15px;
@@ -39,8 +47,9 @@ footer p {
   font-size: 1em;
   color: $Lgrey;
   font-family: $normalFont;
-  margin-left: 42em;
+  text-align: center;
 }
 .move {
-  margin-left: 39em;
+  text-align: center;
+  padding-bottom: 3em;
 }
